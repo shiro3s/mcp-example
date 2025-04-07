@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "start:http": "bun run ./src/main.ts",
+    "start:debug": "bunx @modelcontextprotocol/inspector src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/morgan": "^1.9.9"
+  }
+}
