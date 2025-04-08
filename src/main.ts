@@ -4,7 +4,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
 import { z } from "zod";
 
-import {initMiddleware} from "./middlewares"
+import { initMiddleware } from "./middlewares";
 
 const server = new McpServer({
 	name: "test",
@@ -21,7 +21,7 @@ try {
 	const app = express();
 	const transports: { [sessionId: string]: SSEServerTransport } = {};
 
-	initMiddleware(app)
+	initMiddleware(app);
 
 	app.get("/sse", async (_: Request, res: Response) => {
 		const transport = new SSEServerTransport("/messages", res);
